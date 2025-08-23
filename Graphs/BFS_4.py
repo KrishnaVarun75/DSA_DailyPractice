@@ -1,10 +1,10 @@
 from collections import deque
 
-def bfs(n,m):
+def bfs(n,m,start = 0):
     result = []
-    visited = [False]*n
+    visited = [False]*(n+1)
     q = deque()
-    q.append(0)
+    q.append(start)
     visited[0] = True
 
     while q:
